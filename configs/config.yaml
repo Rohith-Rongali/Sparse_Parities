@@ -1,0 +1,20 @@
+data:
+  num_points: 20000
+  n: 32
+  k: 5
+  alpha: 0.2
+  bias: 0.75
+
+model:
+  hidden_layers: [128]
+  input_dim: ${data.n}
+  output_dim: 1
+  use_batchnorm: False
+  dropout_rate: 0.0
+
+train:
+  lr: 0.01
+  optimizer: 'Adam'
+  loss_fn: 'MSE'
+  batch_size: 32
+  num_epochs: 500
